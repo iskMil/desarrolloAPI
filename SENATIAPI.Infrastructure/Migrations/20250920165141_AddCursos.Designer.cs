@@ -11,8 +11,8 @@ using SENATIAPI.Infrastructure;
 namespace SENATIAPI.Infrastructure.Migrations
 {
     [DbContext(typeof(SENATIDbContext))]
-    [Migration("20250920161428_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20250920165141_AddCursos")]
+    partial class AddCursos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,6 +61,29 @@ namespace SENATIAPI.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("SENATIAPI.Model.Curso", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CursoId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Enabled")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cursos");
                 });
 
             modelBuilder.Entity("SENATIAPI.Model.Curso", b =>

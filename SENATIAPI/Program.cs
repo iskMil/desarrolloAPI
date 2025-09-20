@@ -28,6 +28,8 @@ builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<IDocenteRepository, DocenteRepository>();
 builder.Services.AddScoped<IDocenteService, DocenteService>();
+builder.Services.AddScoped<ICursoService, CursoService>();
+builder.Services.AddScoped<ICursoRepository, CursoRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

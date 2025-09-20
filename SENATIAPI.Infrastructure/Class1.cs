@@ -11,4 +11,7 @@ public class SENATIDbContext : DbContext
 
     // Puedes agregar más entidades aquí
     public DbSet<Docente> Docentes { get; set; }
+
+
+    public DbSet<Curso> Cursos { get; set; }
 }
