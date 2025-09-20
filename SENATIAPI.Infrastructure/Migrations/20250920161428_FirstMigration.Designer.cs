@@ -11,8 +11,8 @@ using SENATIAPI.Infrastructure;
 namespace SENATIAPI.Infrastructure.Migrations
 {
     [DbContext(typeof(SENATIDbContext))]
-    [Migration("20250906163610_AddDocente")]
-    partial class AddDocente
+    [Migration("20250920161428_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,7 +78,7 @@ namespace SENATIAPI.Infrastructure.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Enabled")
+                    b.Property<bool?>("Enabled")
                         .HasColumnType("bit");
 
                     b.Property<string>("Nombre")

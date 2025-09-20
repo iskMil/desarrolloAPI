@@ -75,7 +75,7 @@ namespace SENATIAPI.Infrastructure.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Enabled")
+                    b.Property<bool?>("Enabled")
                         .HasColumnType("bit");
 
                     b.Property<string>("Nombre")
